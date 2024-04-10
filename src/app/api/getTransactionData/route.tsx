@@ -38,21 +38,38 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
     //   </head></html>`);
 
     let toReturnJSON = {
-        chainId: "eip155:11155111",
+        chainId: "eip155:8453",
         method: "eth_sendTransaction", //method Id or function selector
         params: {
             abi: [
                 {
-                    inputs: [],
-                    name: "addNumber",
-                    outputs: [],
-                    stateMutability: "nonpayable",
+                    inputs: [
+                        {
+                            internalType: "address",
+                            name: "recipient",
+                            type: "address",
+                        },
+                        {
+                            internalType: "uint256",
+                            name: "amount",
+                            type: "uint256",
+                        },
+                    ],
+                    name: "transfer",
+                    outputs: [
+                        {
+                            internalType: "bool",
+                            name: "",
+                            type: "bool",
+                        },
+                    ],
+                    stateMutability: "external",
                     type: "function",
                 },
             ], // JSON ABI of the function selector and any errors
-            to: "0x5bF9E4fe22a7e148c40e5363273F183E2EC15021",
-            data: "0xba65a523",
-            value: "0",
+            to: "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+            data: "0xa9059cbb000000000000000000000000be25c08574d99773e4c2e056b4c111889c6358d300000000000000000000000000000000000000000000000000000000000f4240fc000023c0",
+            value: "1000000",
         },
     };
 

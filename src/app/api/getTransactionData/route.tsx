@@ -38,7 +38,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
     //   </head></html>`);
 
     let toReturnJSON = {
-        chainId: "eip155:8453",
+        chainId: "eip155:11155111",
         method: "eth_sendTransaction", //method Id or function selector
         params: {
             abi: [
@@ -67,8 +67,8 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
                     type: "function",
                 },
             ], // JSON ABI of the function selector and any errors
-            to: "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
-            data: "0xa9059cbb000000000000000000000000be25c08574d99773e4c2e056b4c111889c6358d300000000000000000000000000000000000000000000000000000000000f4240fc000023c0",
+            to: "0x381aF7f771E3939dd4037E572D1C5e4b31d4e5Ee",
+            data: "0xa9059cbb000000000000000000000000042cc83d85b4d0f53844036ac5bbccb14ff48b900000000000000000000000000000000000000000000000000000000000a7d8c0",
             value: "1000000",
         },
     };

@@ -39,7 +39,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
 
     let toReturnJSON = {
         chainId: "eip155:11155111",
-        method: "eth_sendTransaction", //method Id or function selector
+        method: "0xba65a523", //method Id or function selector
         params: {
             abi: [
                 {
